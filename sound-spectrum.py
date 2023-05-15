@@ -25,7 +25,6 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
 
-
 def animate(i, line, stream, wf, MAX_y):
 
   # Read n*nFFT frames from stream, n > 0
@@ -48,13 +47,11 @@ def animate(i, line, stream, wf, MAX_y):
   line.set_ydata(Y)
   return line,
 
-
 def init(line):
 
   # This data is a clear frame for animation
   line.set_ydata(np.zeros(nFFT - 1))
   return line,
-
 
 def main():
 
@@ -121,3 +118,5 @@ def main():
 
 if __name__ == '__main__':
   main()
+
+# %%
